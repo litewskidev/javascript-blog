@@ -66,6 +66,7 @@ function generateTitleLinks(){
         console.log(linkHTML);
         /* [DONE] insert link into html variable */
         html = html + linkHTML;
+        console.log(html)
     }
     /* [IN PROGRESS] insert link into titleList */
     titleList.innerHTML = html;
