@@ -169,18 +169,22 @@ function generateAuthors(){
   const articles = document.querySelectorAll(optArticleSelector);
   /* [DONE] START LOOP: for every article: */
   for(let article of articles){
-    /* find authors wrapper */
-
+    /* [DONE] find authors wrapper */
+    const authorsWrapper = article.querySelector(optArticleAuthorSelector);
     /* [DONE] make html variable with empty string */
     let html = '';
-    /* get authors from data-authors attribute */
-
-    /* generate HTML of the link */
-
-    /* add generated code to html variable */
-
-    /* insert HTML of all the links into the tags wrapper */
-
+    /* [DONE] get authors from data-authors attribute */
+    const author = article.getAttribute('data-author');
+    console.log(author);
+    /* [DONE] generate HTML of the link */
+    const linkHTML = '<li><a href="#' + author + '"><span>' + author + '</span></a></li>';
+    console.log(linkHTML);
+    /* [DONE] add generated code to html variable */
+    html = html + linkHTML;
+    /* [DONE] insert HTML of all the links into the tags wrapper */
+    authorsWrapper.innerHTML = html;
   /* [DONE] END LOOP: for every article: */
   }
 }
+
+generateAuthors();
