@@ -14,7 +14,7 @@ function titleClickHandler(event){
   /* [DONE] remove class 'active' from all article links  */
   const activeLinks = document.querySelectorAll('.titles a.active');
 
-  for (let activeLink of activeLinks){
+  for(let activeLink of activeLinks){
     activeLink.classList.remove('active');
   }
 
@@ -25,7 +25,7 @@ function titleClickHandler(event){
   /* [DONE] remove class 'active' from all articles */
   const activeArticles = document.querySelectorAll('.posts article.active');
 
-  for (let activeArticle of activeArticles){
+  for(let activeArticle of activeArticles){
     activeArticle.classList.remove('active');
   }
 
@@ -52,7 +52,7 @@ function generateTitleLinks(){
 
   let html = '';
 
-  for (let article of articles){
+  for(let article of articles){
     /* [DONE] get the article id */
     const articleId = article.getAttribute('id');
     /* [DONE] find the title element */
@@ -71,7 +71,7 @@ function generateTitleLinks(){
   const links = document.querySelectorAll('.titles a');
   console.log(links);
 
-  for (let link of links){
+  for(let link of links){
     link.addEventListener('click', titleClickHandler);
   }
 }
@@ -83,26 +83,31 @@ function generateTags(){
   /* [DONE] find all articles */
   const articles = document.querySelectorAll(optArticleSelector);
   /* [DONE] START LOOP: for every article: */
-  for (let article of articles){
-    /* find tags wrapper */
-
-    /* make html variable with empty string */
-
-    /* get tags from data-tags attribute */
-
-    /* split tags into array */
-
-    /* START LOOP: for each tag */
-
-      /* generate HTML of the link */
-
-      /* add generated code to html variable */
-
-    /* END LOOP: for each tag */
-
-    /* insert HTML of all the links into the tags wrapper */
-
-  /* END LOOP: for every article: */
+  for(let article of articles){
+    /* [DONE] find tags wrapper */
+    const tagsWrapper = article.querySelector(optArticleTagsSelector);
+    /* [DONE] make html variable with empty string */
+    let html = '';
+    /* [DONE] get tags from data-tags attribute */
+    const articleTags = article.getAttribute('data-tags');
+    console.log(articleTags);
+    /* [DONE] split tags into array */
+    const articleTagsArray = articleTags.split(' ');
+    console.log(articleTagsArray);
+    /* [DONE] START LOOP: for each tag */
+    for(let tag of articleTagsArray){
+      /* [DONE] generate HTML of the link */
+      const linkHTML = '<li><a href="#tag-' + tag + '"><span>' + tag + '</span></a></li>';
+      console.log(linkHTML);
+      /* [DONE] add generated code to html variable */
+      html = html + linkHTML;
+      console.log(html);
+    /* [DONE] END LOOP: for each tag */
+    }
+    /* [DONE] insert HTML of all the links into the tags wrapper */
+    tagsWrapper.innerHTML = html;
+    console.log(tagsWrapper);
+  /* [DONE] END LOOP: for every article: */
   }
 }
 
