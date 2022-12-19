@@ -3,7 +3,8 @@
 const optArticleSelector = '.post',
   optTitleSelector = '.post-title',
   optTitleListSelector = '.titles',
-  optArticleTagsSelector = '.post-tags .list';
+  optArticleTagsSelector = '.post-tags .list',
+  optArticleAuthorSelector = '.post-author';
 
 
 function titleClickHandler(event){
@@ -162,3 +163,24 @@ function addClickListenersToTags(){
 
 addClickListenersToTags();
 
+
+function generateAuthors(){
+  /* [DONE] find all articles */
+  const articles = document.querySelectorAll(optArticleSelector);
+  /* [DONE] START LOOP: for every article: */
+  for(let article of articles){
+    /* find authors wrapper */
+
+    /* [DONE] make html variable with empty string */
+    let html = '';
+    /* get authors from data-authors attribute */
+
+    /* generate HTML of the link */
+
+    /* add generated code to html variable */
+
+    /* insert HTML of all the links into the tags wrapper */
+
+  /* [DONE] END LOOP: for every article: */
+  }
+}
