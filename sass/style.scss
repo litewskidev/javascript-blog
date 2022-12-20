@@ -118,7 +118,7 @@ body {
   font-size: 22px;
 
   a {
-    color: black;
+    color: rgb(0, 0, 0);
     text-decoration: none;
   }
 }
@@ -129,6 +129,15 @@ body {
   p {
     margin: 0 10px 0 0;
   }
+
+  span {
+    color: rgb(56, 56, 56);
+  }
+
+  a {
+    font-size: 17px;
+    text-decoration: none;
+  }
 }
 
 .tags li {
@@ -138,7 +147,7 @@ body {
 .tags a {
   text-decoration: none;
   line-height: 0.5;
-  color: black;
+  color: rgb(0, 0, 0);
 }
 
 .tag-size-1 {
@@ -159,4 +168,13 @@ body {
 
 .tag-size-5 {
   font-size: 280%;
+}
+
+.sidebar .authors a {
+  color: rgb(56, 56, 56);
+  font-size: 19px;
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: none;
+  line-height: 0;
 }
