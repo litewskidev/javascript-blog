@@ -5,7 +5,7 @@ const optArticleSelector = '.post',
   optTitleListSelector = '.titles',
   optArticleTagsSelector = '.post-tags .list',
   optArticleAuthorSelector = '.post-author',
-  optTagsListSelector = '.tags .list';
+  optTagsListSelector = '.tags';
 
 
 function titleClickHandler(event){
@@ -128,7 +128,7 @@ function generateTags(){
   /* [DONE] START LOOP: for each tag in allTags: */
   for(let tag in allTags){
     /* generate code of a link and add it to allTagsHTML */
-    allTagsHTML += '<li><a href="#tag-' + tag + '"><span>'+ tag +'</span><span>(' + allTags[tag] + ')</span></a></li>';
+    allTagsHTML += '<li><a href="#tag-' + tag + '"><span>'+ tag +'</span><span> (' + allTags[tag] + ')</span></a></li>';
     console.log(allTagsHTML);
   /* [DONE] END LOOP: for each tag in allTags: */
   }
