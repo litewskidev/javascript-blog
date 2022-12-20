@@ -12,33 +12,25 @@ function titleClickHandler(event){
   event.preventDefault();
   const clickedElement = this;
   console.log('Article was clicked!', event);
-
   /* [DONE] remove class 'active' from all article links  */
   const activeLinks = document.querySelectorAll('.titles a.active');
-
   for(let activeLink of activeLinks){
     activeLink.classList.remove('active');
   }
-
   /* [DONE] add class 'active' to the clicked link */
   clickedElement.classList.add('active');
   console.log('clickedElement', clickedElement);
-
   /* [DONE] remove class 'active' from all articles */
   const activeArticles = document.querySelectorAll('.posts article.active');
-
   for(let activeArticle of activeArticles){
     activeArticle.classList.remove('active');
   }
-
   /* [DONE] get 'href' attribute from the clicked link */
   const articleSelector = clickedElement.getAttribute('href');
   console.log(articleSelector);
-
   /* [DONE] find the correct article using the selector (value of 'href' attribute) */
   const targetArticle = document.querySelector(articleSelector);
   console.log(targetArticle);
-
   /* [DONE] add class 'active' to the correct article */
   targetArticle.classList.add('active');
 }
@@ -49,13 +41,10 @@ function generateTitleLinks(customSelector = ''){
   /* [DONE] remove contents of titleList */
   const titleList = document.querySelector(optTitleListSelector);
   titleList.innerHTML = '';
-
   /* [DONE] for each article */
   const articles = document.querySelectorAll(optArticleSelector + customSelector);
   console.log(articles);
-
   let html = '';
-
   for(let article of articles){
     /* [DONE] get the article id */
     const articleId = article.getAttribute('id');
@@ -71,10 +60,8 @@ function generateTitleLinks(customSelector = ''){
   }
   /* [DONE] insert link into titleList */
   titleList.innerHTML = html;
-
   const links = document.querySelectorAll('.titles a');
   console.log(links);
-
   for(let link of links){
     link.addEventListener('click', titleClickHandler);
   }
@@ -121,13 +108,14 @@ function generateTags(){
     console.log('Tags Wrapper:', tagsWrapper);
   /* [DONE] END LOOP: for every article: */
   }
+
   /* [DONE] find list of tags in right column */
   const tagList = document.querySelector(optTagsListSelector);
   /* [DONE] create variable for all links HTML code */
   let allTagsHTML = '';
   /* [DONE] START LOOP: for each tag in allTags: */
   for(let tag in allTags){
-    /* generate code of a link and add it to allTagsHTML */
+    /* [DONE] generate code of a link and add it to allTagsHTML */
     allTagsHTML += '<li><a href="#tag-' + tag + '"><span>'+ tag +'</span><span> (' + allTags[tag] + ')</span></a></li>';
     console.log(allTagsHTML);
   /* [DONE] END LOOP: for each tag in allTags: */
