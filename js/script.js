@@ -138,8 +138,8 @@ function generateTags(){
     tagsWrapper.innerHTML = html;
   /* [DONE] END LOOP: for every article: */
   }
-  /* [DONE] find list of tags in
 
+  /* [DONE] find list of tags in
   !!! RIGHT COLUMN !!! */
   const tagList = document.querySelector(opts.tagsListSelector);
   const tagsParams = calculateTagsParams(allTags);
@@ -238,8 +238,8 @@ function generateAuthors(){
     }
   /* [DONE] END LOOP: for every article: */
   }
+
   /* [DONE] find list of authors in
-  
   !!! RIGHT COLUMN !!! */
   const authorList = document.querySelector(opts.authorsListSelector);
   /* [DONE] create const allAuthorsData for array with authors */
