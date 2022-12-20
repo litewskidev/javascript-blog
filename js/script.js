@@ -5,7 +5,9 @@ const optArticleSelector = '.post',
   optTitleListSelector = '.titles',
   optArticleTagsSelector = '.post-tags .list',
   optArticleAuthorSelector = '.post-author',
-  optTagsListSelector = '.tags';
+  optTagsListSelector = '.tags',
+  optCloudClassCount = '5',
+  optCloudClassPrefix = 'tag-size-';
 
 
 function titleClickHandler(event){
@@ -82,6 +84,11 @@ function calculateTagsParams(tags){
     }
   }
   return params;
+}
+
+
+function calculateTagClass(count, params){
+  
 }
 
 
