@@ -113,6 +113,14 @@ body {
 
 .post-author {
   font-style: italic;
+  font-weight: bold;
+  list-style-type: none;
+  font-size: 22px;
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
 }
 
 .post-tags {
@@ -121,4 +129,34 @@ body {
   p {
     margin: 0 10px 0 0;
   }
+}
+
+.tags li {
+  display: inline;
+}
+
+.tags a {
+  text-decoration: none;
+  line-height: 0.5;
+  color: black;
+}
+
+.tag-size-1 {
+  font-size: 130%;
+}
+
+.tag-size-2 {
+  font-size: 160%;
+}
+
+.tag-size-3 {
+  font-size: 200%;
+}
+
+.tag-size-4 {
+  font-size: 240%;
+}
+
+.tag-size-5 {
+  font-size: 280%;
 }
